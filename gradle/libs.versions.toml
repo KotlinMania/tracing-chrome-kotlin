@@ -13,6 +13,9 @@ kmIo = "0.2.0"
 serdeJson = "0.1.1"
 tracingSubscriber = "0.1.0"
 tracing = "0.1.0"
+threadlocal = "0.3.3"
+atomicfu = "0.27.0"
+serde = "0.1.10"
 
 [plugins]
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
@@ -33,8 +36,11 @@ collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-im
 kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinxBenchmark" }
 km-io = { module = "io.github.kotlinmania:km-io", version.ref = "kmIo" }
 serde-json-kotlin = { module = "io.github.kotlinmania:serde-json-kotlin", version.ref = "serdeJson" }
+serde-core = { module = "io.github.kotlinmania:serde-core", version.ref = "serde" }
 tracing-subscriber-kotlin = { module = "io.github.kotlinmania:tracing-subscriber-kotlin", version.ref = "tracingSubscriber" }
 tracing-kotlin = { module = "io.github.kotlinmania:tracing-kotlin", version.ref = "tracing" }
+threadlocal-kotlin = { module = "io.github.kotlinmania:threadlocal-kotlin", version.ref = "threadlocal" }
+kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "atomicfu" }
 
 [bundles]
 tracingchrome-commonMain = [
@@ -43,7 +49,10 @@ tracingchrome-commonMain = [
   "collections-immutable",
   "km-io",
   "serde-json-kotlin",
+  "serde-core",
   "tracing-subscriber-kotlin",
+  "threadlocal-kotlin",
+  "kotlinx-atomicfu",
 ]
 tracingchrome-commonTest = [
   "kotlinx-coroutines-test",
