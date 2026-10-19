@@ -16,13 +16,3 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "tracing-chrome-kotlin"
-
-val tracingSubscriberKotlinLocal = file("../tracing-subscriber-kotlin")
-if (tracingSubscriberKotlinLocal.exists()) {
-    includeBuild(tracingSubscriberKotlinLocal) {
-        dependencySubstitution {
-            substitute(module("io.github.kotlinmania:tracing-subscriber-kotlin"))
-                .using(project(":"))
-        }
-    }
-}
