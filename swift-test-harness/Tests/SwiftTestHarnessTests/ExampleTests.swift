@@ -1,21 +1,21 @@
 #if canImport(Testing)
 import Testing
-import Template
+import TracingChrome
 
-@Suite("Template Swift Export Tests")
-struct TemplateExportTests {
-    @Test("Template swift module imported cleanly")
+@Suite("TracingChrome Swift Export Tests")
+struct TracingChromeExportTests {
+    @Test("TracingChrome swift module imported cleanly")
     func testSwiftModuleLoads() throws {
-        #expect(Bool(true), "Template swift module imported cleanly")
+        #expect(Bool(true), "TracingChrome swift module imported cleanly")
     }
 }
 #elseif canImport(XCTest)
 import XCTest
-import Template
+import TracingChrome
 
-final class TemplateExportTests: XCTestCase {
+final class TracingChromeExportTests: XCTestCase {
     func testSwiftModuleLoads() throws {
-        XCTAssertTrue(true, "Template swift module imported cleanly")
+        XCTAssertTrue(true, "TracingChrome swift module imported cleanly")
     }
 }
 #endif

@@ -136,6 +136,10 @@ val intellijCoroutinesVersion =
 // dependency population, so keep the default embeddable runner explicit too.
 val projectDependencyHandler = project.dependencies
 configurations.configureEach {
+    exclude(group = "io.github.kotlinmania", module = "serde-derive")
+    exclude(group = "io.github.kotlinmania", module = "serde-derive-android")
+    exclude(group = "io.github.kotlinmania", module = "proc-macro-kotlin")
+    exclude(group = "io.github.kotlinmania", module = "proc-macro-kotlin-android")
     if (name == "swiftExportClasspath") {
         dependencies.add(projectDependencyHandler.create("org.jetbrains.kotlin:swift-export-embeddable:$kotlinVersion"))
         dependencies.add(
